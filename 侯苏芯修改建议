@@ -1,0 +1,6 @@
+侯苏芯修改意见：
+（1）nn.BatchNorm1d可能需要改成nn.BatchNorm2d，使用1d会报错，但是改完之后网络好像还是会有问题；
+（2）我出现了'DataLoader' object is not callable 这个错误，这个可能是因为torch里面不能用trainLoader()这样的形式？因为我在console里面试了一下，trainLoader这个变量是有意义的，加括号就没了，当然这只是我的猜测；[image](https://user-images.githubusercontent.com/118913021/205044979-f002329d-06e0-40de-a406-77d91b05aab8.png)
+（3）模型可视化（summary）那里报错说输入多了一个维度，这个可能是torch中summary有一个batch_size（默认为-1）参数，我改了之后不报这个错了，又报别的错了（"mat1 and mat2 shapes cannot be multiplied (2048x1 and 1024x512)");
+（4）试了好多还是没能跑起来，等我有时间再试试。
+ 2022年12月1日
